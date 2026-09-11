@@ -493,6 +493,17 @@ a:hover {
 }
 
 .news-card {
+    /* ... bestehende Regeln ... */
+    display: flex;          /* NEU */
+    flex-direction: column; /* NEU */
+    height: 100%;          /* NEU: Gleichmäßige Höhe */
+}
+
+.news-card .news-image {
+    flex: 0 0 200px;       /* NEU: Feste Höhe für Bilder */
+}
+
+.news-card {
     background: var(--white);
     border-radius: var(--radius-lg);
     overflow: hidden;
