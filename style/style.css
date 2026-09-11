@@ -338,14 +338,32 @@ a:hover {
 /* ============================================
    HERO SECTION (Gradient-Hintergrund)
    ============================================ */
+/* ===== HERO SECTION (MIT BILD) ===== */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-dark) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('https://images.unsplash.com/photo-1452573992436-6d508f200b30?q=80&w=1746&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax-Effekt */
     color: var(--white);
     padding: 4rem 0;
     position: relative;
     overflow: hidden;
-    /* NEU: Leichter Overlay für bessere Lesbarkeit */
-    background-blend-mode: overlay;
+}
+
+/* Entferne oder passe den .hero-background-Block an */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Entferne den Platzhalter-Stil (oder behalte ihn als Fallback) */
+.hero-background .placeholder {
+    display: none; /* Verstecke den Platzhalter */
 }
 
 .hero-section::before {
