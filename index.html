@@ -6,7 +6,17 @@
     <title>PelotonPro – Live Radsport Ergebnisse & Teams</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Theme Script (MUSS im head sein!) -->
+    <script>
+        // Lade das gespeicherte Theme oder nutze Light als Standard
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
+    </script>
 </head>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" aria-label="Theme wechseln">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
 <body>
     <!-- Header mit Navigation -->
     <header>
